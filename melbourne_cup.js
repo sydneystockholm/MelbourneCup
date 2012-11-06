@@ -60,6 +60,11 @@ horses = Object.keys(horses).map(function (name) {
     return a.odds < b.odds ? -1 : 1;
 });
 
+//Split out the bottom ranked horses so each player gets a fixed number of horses
+var horse_count = Object.keys(horses).length
+  , unaccounted_count = horse_count - Math.floor(horse_count / players.length) * players.length
+  , unaccounted_for = horses.splice(horses.length - unaccounted_count);
+
 //Give each player a top-ranked horse
 randomSort(players).forEach(function (player) {
     buckets[player].push(horses.shift());
@@ -84,6 +89,13 @@ players.sort().forEach(function (player) {
         console.log('    %s \x1B[32m%s\x1B[0m', horse.name, horse.odds);
     });
 });
+
+if (unaccounted_for.length) {
+    console.log('\n  \x1B[33mUnaccounted for\x1B[0m\n');
+    unaccounted_for.forEach(function (horse) {
+        console.log('    %s \x1B[32m%s\x1B[0m', horse.name, horse.odds);
+    });
+}
 
 console.log('');
 
