@@ -1,6 +1,7 @@
 ## Melbourne Cup
 
-![Horse](http://www.justclipart.org/clipart/Horse-clip-art-11.jpg)
+:horse:
+
 
 Fairly distribute [Melbourne Cup](http://en.wikipedia.org/wiki/Melbourne_Cup) horses among players in an office sweepstake.
 
