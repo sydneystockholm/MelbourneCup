@@ -1,43 +1,29 @@
-function randomSort(arr) {
-    for (var i = 0; i < 1000; i++) {
-        arr.sort(function (a, b) {
-            return Math.random() < 0.5 ? -1 : 1;
-        });
-    }
-    return arr;
-}
-
-function round(num, decimals) {
-    var multiplier = Math.pow(10, decimals);
-    return Math.round(num * multiplier) / multiplier;
-}
-
-//Data from puntersparadise.com.au/melbourne-cup/melbourne-cup-odds/
+//Data from http://www.races.com.au/2013/11/04/two-word-melbourne-cup-2013-form-guide/
 var horses = {
-    'Dunaden': 7
-  , 'Americain': 8
-  , 'Jakkalberry': 71
-  , 'Red Cadeaux': 8.5
-  , 'Winchester': 61
-  , 'Voila Ici': 121
-  , 'Cavalryman': 26
-  , 'Mount Athos': 7
-  , 'Sanagas': 51
-  , 'Ethiopia': 21
-  , 'Fiorente': 41
-  , 'Galileo\'s Choice': 16
-  , 'Glencadam Gold': 41
-  , 'Green Moon': 17
-  , 'Maluckyday': 14
-  , 'Mourayan': 31
-  , 'My Quest for Peace': 17
-  , 'Niwot': 61
-  , 'Tac de Boistron': 101
-  , 'Lights of Heaven': 17
-  , 'Precedence': 81
-  , 'Unusual Suspect': 101
-  , 'Zabeelionaire': 51
-  , 'Kelinni': 21
+    'Dunaden': 41
+  , 'Green Moon': 41
+  , 'Red Cadeaux': 31
+  , 'Sea Moon': 14
+  , 'Brown Panther': 19
+  , 'Fiorente': 7.50
+  , 'Foreteller': 31
+  , 'Dandino': 12
+  , 'Ethiopa': 81
+  , 'Fawkner': 18
+  , 'Mourayan': 126
+  , 'Seville': 16
+  , 'Super Cool': 51
+  , 'Masked Marvel': 31
+  , 'Mount Athos': 9.50
+  , 'Royal Empire': 19
+  , 'Voleuse De Coeurs': 17
+  , 'Hawkspur': 17
+  , 'Simenon': 17
+  , 'Ibicenco': 101
+  , 'Verema': 14
+  , 'Dear Demi': 21
+  , 'Tres Blue': 21
+  , 'Ruscello': 61
 };
 
 //Get the list of players from argv
@@ -66,12 +52,12 @@ var horse_count = Object.keys(horses).length
   , unaccounted_for = horses.splice(horses.length - unaccounted_count);
 
 //Give each player a top-ranked horse
-randomSort(players).forEach(function (player) {
+shuffle(players).forEach(function (player) {
     buckets[player].push(horses.shift());
 });
 
 //Distribute the remaining horses randomly
-randomSort(horses).forEach(function (horse, i) {
+shuffle(horses).forEach(function (horse, i) {
     var player = players[i % players.length];
     buckets[player].push(horse);
 });
@@ -97,5 +83,18 @@ if (unaccounted_for.length) {
     });
 }
 
-console.log('');
+process.stdout.write('\n');
 
+function shuffle(array) {
+    array.forEach(function (value, index) {
+        var random = Math.floor(Math.random() * array.length);
+        array[index] = array[random];
+        array[random] = value;
+    });
+    return array;
+}
+
+function round(num, decimals) {
+    var multiplier = Math.pow(10, decimals);
+    return Math.round(num * multiplier) / multiplier;
+}
