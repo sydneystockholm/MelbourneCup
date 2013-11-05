@@ -1,3 +1,5 @@
+var crypto = require('crypto');
+
 //Data from http://www.races.com.au/2013/11/04/two-word-melbourne-cup-2013-form-guide/
 var horses = {
     'Dunaden': 41
@@ -87,11 +89,15 @@ process.stdout.write('\n');
 
 function shuffle(array) {
     array.forEach(function (value, index) {
-        var random = Math.floor(Math.random() * array.length);
+        var random = Math.floor(superRandom() * array.length);
         array[index] = array[random];
         array[random] = value;
     });
     return array;
+}
+
+function superRandom() {
+    return crypto.randomBytes(1)[0] / 255;
 }
 
 function round(num, decimals) {
