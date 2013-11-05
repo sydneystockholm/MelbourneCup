@@ -97,7 +97,7 @@ function shuffle(array) {
 }
 
 function superRandom() {
-    return crypto.randomBytes(1)[0] / 255;
+    return crypto.randomBytes(1)[0] / 256;
 }
 
 function round(num, decimals) {
