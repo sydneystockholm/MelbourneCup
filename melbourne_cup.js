@@ -1,31 +1,27 @@
 var crypto = require('crypto');
 
-//Data from http://www.races.com.au/2013/11/04/two-word-melbourne-cup-2013-form-guide/
+//Data from http://www.races.com.au/melbourne-cup/
 var horses = {
-    'Dunaden': 41
-  , 'Green Moon': 41
-  , 'Red Cadeaux': 31
-  , 'Sea Moon': 14
-  , 'Brown Panther': 19
-  , 'Fiorente': 7.50
-  , 'Foreteller': 31
-  , 'Dandino': 12
-  , 'Ethiopa': 81
-  , 'Fawkner': 18
-  , 'Mourayan': 126
-  , 'Seville': 16
-  , 'Super Cool': 51
-  , 'Masked Marvel': 31
-  , 'Mount Athos': 9.50
-  , 'Royal Empire': 19
-  , 'Voleuse De Coeurs': 17
-  , 'Hawkspur': 17
-  , 'Simenon': 17
-  , 'Ibicenco': 101
-  , 'Verema': 14
-  , 'Dear Demi': 21
-  , 'Tres Blue': 21
-  , 'Ruscello': 61
+    'Mihalic': 4.40
+  , 'Pierrette': 9.00
+  , 'Miss Idyllic': 17.00
+  , 'Miss Loren': 21.00
+  , 'Poppi Rox': 61.00
+  , 'Cullemmy\'s Diamond': 18.00
+  , 'Results': 26.00
+  , 'Dagny': 31.00
+  , 'Hello Hornsby': 26.00
+  , 'Antelucan': 9.00
+  , 'Charlie\'s Dream': 51.00
+  , 'Comprende': 4.60
+  , 'Lady Esprit': 6.50
+  , 'The Grey Flash': 31.00
+  , 'Thurlow': 6.00
+  , 'Zarabeel': 31.00
+  , 'Haybah': 18.00
+  , 'Boomgal': 41.00
+  , 'Shining Brooke': 21.00
+  , 'Belhamage': 21.00
 };
 
 //Get the list of players from argv
