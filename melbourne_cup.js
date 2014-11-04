@@ -1,27 +1,29 @@
 var crypto = require('crypto');
 
-//Data from http://www.races.com.au/melbourne-cup/
+//Data from http://www.races.com.au/2014/11/04/two-word-melbourne-cup-2014-form-guide/
 var horses = {
-    'Mihalic': 4.40
-  , 'Pierrette': 9.00
-  , 'Miss Idyllic': 17.00
-  , 'Miss Loren': 21.00
-  , 'Poppi Rox': 61.00
-  , 'Cullemmy\'s Diamond': 18.00
-  , 'Results': 26.00
-  , 'Dagny': 31.00
-  , 'Hello Hornsby': 26.00
-  , 'Antelucan': 9.00
-  , 'Charlie\'s Dream': 51.00
-  , 'Comprende': 4.60
-  , 'Lady Esprit': 6.50
-  , 'The Grey Flash': 31.00
-  , 'Thurlow': 6.00
-  , 'Zarabeel': 31.00
-  , 'Haybah': 18.00
-  , 'Boomgal': 41.00
-  , 'Shining Brooke': 21.00
-  , 'Belhamage': 21.00
+    'Admire Rakti':  6
+  , 'Fawkner':  7.50
+  , 'Red Cadeaux':  21
+  , 'Protectionist':  8
+  , 'Seismos':  81
+  , 'Junoob':  26
+  , 'Royal Diamond':  81
+  , 'Gatewood':  71
+  , 'Mutual Regard':  9.50
+  , 'Who Shot Thebarman':  21
+  , 'Willing Foe':  26
+  , 'My Ambivalent':  34
+  , 'Precedence':  81
+  , 'Brambles':  71
+  , 'Mr O’Ceirin':  201
+  , 'Au Revoir':  81
+  , 'Lidari':  71
+  , 'Opinion':  61
+  , 'Araldo':  26
+  , 'Lucia Valentina':  7
+  , 'Unchain My Heart':  101
+  , 'Signoff':  8.50
 };
 
 //Get the list of players from argv
