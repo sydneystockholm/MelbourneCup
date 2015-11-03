@@ -2,28 +2,30 @@ var crypto = require('crypto');
 
 //Data from http://www.races.com.au/2014/11/04/two-word-melbourne-cup-2014-form-guide/
 var horses = {
-    'Admire Rakti':  6
-  , 'Fawkner':  7.50
-  , 'Red Cadeaux':  21
-  , 'Protectionist':  8
-  , 'Seismos':  81
-  , 'Junoob':  26
-  , 'Royal Diamond':  81
-  , 'Gatewood':  71
-  , 'Mutual Regard':  9.50
+    'Snow Sky':  51
+  , 'Criterion':  17
+  , 'Fame Game':  5
+  , 'Our Ivanhowe':  19
+  , 'Big Orange':  61
+  , 'Hartnell':  31
+  , 'Hokko Brave':  41
+  , 'Max Dynamite':  11
+  , 'Red Cadeaux':  31
+  , 'Trip to Paris':  7.5
   , 'Who Shot Thebarman':  21
-  , 'Willing Foe':  26
-  , 'My Ambivalent':  34
-  , 'Precedence':  81
-  , 'Brambles':  71
-  , 'Mr O’Ceirin':  201
-  , 'Au Revoir':  81
-  , 'Lidari':  71
-  , 'Opinion':  61
-  , 'Araldo':  26
-  , 'Lucia Valentina':  7
-  , 'Unchain My Heart':  101
-  , 'Signoff':  8.50
+  , 'Sky Hunter':  34
+  , 'The Offer':  41
+  , 'Grand Marshal':  51
+  , 'Preferment':  10
+  , 'Quest for More':  81
+  , 'Almoonqith':  18
+  , 'Kingfisher':  41
+  , 'Prince of Penzance':  101
+  , 'Bondi Beach':  21
+  , 'Sertorius':  151
+  , 'The United States':  21
+  , 'Excess Knowledge': 31
+  , 'Gust of Wind': 34
 };
 
 //Get the list of players from argv
